@@ -1,0 +1,46 @@
+digraph "druid" {
+  node [ fontname = "Trebuchet", label = "\N"]
+  node [ shape = "tab", color = "blue"]
+  node [ color = "blue"]
+    "com.aor.moges.protocol" [label="com.aor.moges.protocol"]
+  node [ color = "blue"]
+    "com.aor.moges" [label="com.aor.moges"]
+  node [ color = "blue"]
+    "com.aor.moges.server" [label="com.aor.moges.server"]
+  node [ color = "blue"]
+    "com.aor.moges.config.smtp" [label="com.aor.moges.config.smtp"]
+  node [ color = "blue"]
+    "com.aor.moges.mbox" [label="com.aor.moges.mbox"]
+  node [ color = "blue"]
+    "com.aor.moges.config.mbox" [label="com.aor.moges.config.mbox"]
+  node [ color = "blue"]
+    "com.aor.moges.protocol.smtp" [label="com.aor.moges.protocol.smtp"]
+  node [ color = "blue"]
+    "com.aor.moges.config" [label="com.aor.moges.config"]
+  edge [ color = "black", arrowhead="empty" ]
+  edge [ style="solid" ]
+    "com.aor.moges.protocol" -> "com.aor.moges.server"
+  edge [ style="solid" ]
+    "com.aor.moges" -> "com.aor.moges.server"
+  edge [ style="solid" ]
+    "com.aor.moges.config.smtp" -> "com.aor.moges.protocol.smtp"
+  edge [ style="solid" ]
+    "com.aor.moges.config.smtp" -> "com.aor.moges.server"
+  edge [ style="solid" ]
+    "com.aor.moges.config.smtp" -> "com.aor.moges.config"
+  edge [ style="solid" ]
+    "com.aor.moges.mbox" -> "com.aor.moges.protocol.smtp"
+  edge [ style="solid" ]
+    "com.aor.moges.mbox" -> "com.aor.moges.server"
+  edge [ style="solid" ]
+    "com.aor.moges.config.mbox" -> "com.aor.moges.mbox"
+  edge [ style="solid" ]
+    "com.aor.moges.config.mbox" -> "com.aor.moges.config"
+  edge [ style="solid" ]
+    "com.aor.moges.protocol.smtp" -> "com.aor.moges.protocol"
+  edge [ style="solid" ]
+    "com.aor.moges.protocol.smtp" -> "com.aor.moges.server"
+  edge [ style="solid" ]
+    "com.aor.moges.config" -> "com.aor.moges.server"
+  edge [ color = "blue", arrowhead="dot", style="solid" ]
+}
